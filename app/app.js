@@ -1,7 +1,11 @@
 var app = angular.module('myApp', ['ngRoute', 'userModule']);
 
 app.controller('AppController', ['$scope', function($scope){
-	
+	// 点击导航栏中的“操作”,打开折叠菜单
+	$scope.show = false;
+	$scope.showAccordion = function(){
+		$scope.show = !$scope.show;
+	};
 }]);
 
 app.config(function($routeProvider){
@@ -21,5 +25,3 @@ app.config(function($routeProvider){
 		redirectTo:'/latestnews'
 	});
 });
-
-
