@@ -69,13 +69,13 @@
 								  </a>
 								  <div class="m2">
 									<div ng-bind="userInfo.username"> <small> 石家庄，河北</small></div>
-									<a ng-href="" class="btn btn-sm btn-success btn-rounded">支持她！</a>
+									<a ng-href="#" class="btn btn-sm btn-success btn-rounded" ng-click="calAmountOfPraise()">支持她！</a>
 								  </div>
 								</div>
 								<div class="col-sm-5">
 								  <div class="pull-right text-center zan">
 									<a ng-href="">
-									  <span class="h3">2k </span>
+									  <span class="h3" ng-bind="amountOfPraise"></span>
 									  <small> 点赞 </small>
 									</a> ,
 									<a ng-href="">

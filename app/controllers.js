@@ -16,6 +16,12 @@ userModule.controller('UserInfoController', ['$scope',
                 username:"刘凯欣"
             };
         };
+        // 计算点赞量
+        $scope.amountOfPraise = 0;
+        $scope.calAmountOfPraise = function(){
+            $scope.amountOfPraise = $scope.amountOfPraise + 1;
+
+        }
     }
 ]);
 userModule.controller('LatestNewsController', ['$scope',

@@ -66,7 +66,7 @@ AngularJS课程设计说明
 	(1)用户头像采用ng-src进行双向数据绑定
 
 	(2)用户名输入框可以修改的部分使用ng-model进行双向数据绑定
-	
+
 	视图展示部分使用ng-bind进行单向数据绑定
 	控制器为controller.js中的UserInfoController
 		userModule.controller('UserInfoController', ['$scope', 
@@ -87,3 +87,6 @@ AngularJS课程设计说明
 	        };
 	    }
 	]);
+
+4.  用户点赞量的累计
+	点击一次，点赞量加1
