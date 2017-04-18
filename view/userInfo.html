@@ -1,1 +1,18 @@
-这是userinfo页面内容
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal" role="form" ng-controller="UserInfoController">
+            <div class="form-group">
+                <label class="col-md-2 control-label">用户名：</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control"  ng-model="userInfo.username">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button class="btn btn-default" ng-click="setFormData()">保存修改</button>
+                    <button class="btn btn-default" ng-click="resetFormData()">放弃修改</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

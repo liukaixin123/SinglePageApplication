@@ -1,8 +1,21 @@
 var userModule = angular.module('userModule', []);
 
-userModule.controller('UserInfoController', ['$scope',
+userModule.controller('UserInfoController', ['$scope', 
     function($scope) {
-
+        $scope.userInfo = {
+            username:"刘凯欣",
+            userImage:"images/a9.jpg"
+        };
+        $scope.setFormData = function(){
+            $scope.userInfo = {
+                username:"夜闪冰"
+            };
+        };
+        $scope.resetFormData = function(){
+            $scope.userInfo = {
+                username:"刘凯欣"
+            };
+        };
     }
 ]);
 userModule.controller('LatestNewsController', ['$scope',

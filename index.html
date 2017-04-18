@@ -8,7 +8,7 @@
 <link href="css/style.css" rel="stylesheet" />
 </head>
 <body ng-controller="AppController">
-<div>
+<div ng-controller="UserInfoController">
 	<div class="navbar-fixed-top ys2">
 		<div class="row">
 			<div class="toper col-md-2 column bg cen">
@@ -17,30 +17,30 @@
 			<div class="toper col-md-10 column bg2">
 				<div class="pull-left ys5">
 					<a ng-href="#"><span class="glyphicon glyphicon-list"></span></a>
-					<a ng-href="#"><span class="glyphicon glyphicon-user"></span></a>
+					<a ng-href="#/userinfo"><span class="glyphicon glyphicon-user"></span></a>
 				</div>
 				<div class="pull-left toper_m">
 					<a ng-href="#"><b>我的文章</b></a>
 					<a ng-href="#/latestnews"><b>最新动态</b></a>
 				</div>
 				<div class="pull-right toper_m">
-					<a ng-href="#"><span class="glyphicon glyphicon-bell"></span></a>
-					<a ng-href="#">别无所求</a>
-					<a ng-href="#"><img src="images/a0.jpg" class="img-circle tou"></a>
+					<a ng-href="#/message"><span class="glyphicon glyphicon-bell"></span></a>
+					<a ng-href="#/userinfo" ng-bind="userInfo.username"></a>
+					<a ng-href="#/userinfo"><img ng-src="{{userInfo.userImage}}" class="img-circle tou"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	
 </div>
-<div class="container-fluid down">
+<div class="container-fluid down" ng-controller="UserInfoController">
 	<div class="row">
 		<!--左栏-->
 		<div class="col-md-2 column bg ys2">
 			<!--头像-->
 			<div class="cen">
-				<img src="images/a0.jpg" class="img-circle">
-				<h5>别无所求</h5><h6>IT大牛</h6>
+				<img ng-src="{{userInfo.userImage}}" class="img-circle">
+				<h5 ng-bind="userInfo.username"></h5><h6>IT大牛</h6>
 			</div>
 			<!--导航栏-->
 			<ul class="nav" ng-controller="NavController">
@@ -65,10 +65,10 @@
 							  <div class="row">
 								<div class="col-sm-7">
 								  <a ng-href="" class="pull-left">
-									<img src="images/a0.jpg" class="img-circle">
+									<img ng-src="{{userInfo.userImage}}" class="img-circle">
 								  </a>
 								  <div class="m2">
-									<div>别无所求 <small> 石家庄，河北</small></div>
+									<div ng-bind="userInfo.username"> <small> 石家庄，河北</small></div>
 									<a ng-href="" class="btn btn-sm btn-success btn-rounded">支持她！</a>
 								  </div>
 								</div>
